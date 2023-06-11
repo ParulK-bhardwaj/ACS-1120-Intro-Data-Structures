@@ -1,5 +1,5 @@
 """Main script, uses other modules to generate sentences."""
-from flask import Flask
+from flask import Flask, render_template
 import histogram
 
 
@@ -13,7 +13,8 @@ app = Flask(__name__)
 def home():
     sentence = histogram.main()
     """Route that returns a web page containing the generated text."""
-    return f"<p>{sentence}</p>"
+    # return f"<p>{sentence}</p>"
+    return render_template("index.html", sentence=sentence)
 
 
 if __name__ == "__main__":

@@ -5,8 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tweet Generator</title>
+  <style>
+    body {
+      height: 100vh;
+      font-family: cursive;
+      font-size: 35px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("https://www.mit.edu/files/images/202211/MIT-Neural-Networks-SL.gif");
+      background-size: cover;
+     
+    }
+
+    blockquote {
+      background-color: #f1f1f1bd;
+      padding: 25px;
+      box-shadow: 0 2px 4px rgba(243, 245, 242, 0.89);
+      width: fit-content;
+      display: inline-block;
+      border-radius: 0.2em;
+    }
+  </style>`
 </head>
 <body>
-    <blockquote>TODO: Replace this text with the sentence you generated!</blockquote>
+    <blockquote>{{ sentence }}</blockquote>
 </body>
 </html>
