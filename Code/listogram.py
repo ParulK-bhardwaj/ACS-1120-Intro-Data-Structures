@@ -24,7 +24,7 @@ class Listogram(list):
         if word_index is not None:
             self[word_index] = [word, self[word_index][1] + count]
         else:
-            self.append((word, count))
+            self.append([word, count])
             self.types += 1
         self.tokens += count
 
