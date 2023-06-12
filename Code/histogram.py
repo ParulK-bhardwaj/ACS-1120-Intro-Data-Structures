@@ -26,7 +26,7 @@ def stochastic_sampling(histogram):
     for prob in probabilities:
         weighted_probabilities.append(prob / total_probability)
 
-    word = random.choices(words, weighted_probabilities)[0]
+    word = random.choices(words, weights = weighted_probabilities, k=1)[0]
     return word
 
 def main():
@@ -35,5 +35,3 @@ def main():
     selected_words[0] = selected_words[0].capitalize()
     jumbled_sentence = f'{" ".join(selected_words)}.'
     return jumbled_sentence
-
-print(main())
