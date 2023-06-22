@@ -4,6 +4,7 @@ import random
 def histogram ():
     text_file = "./data/sherlock.txt"
     source_text = open(text_file, "r").read()
+    
     translator = str.maketrans("", "", string.punctuation + "“”‘’")
 
     # remove punctuations and split into words
@@ -35,3 +36,4 @@ def main():
     selected_words[0] = selected_words[0].capitalize()
     jumbled_sentence = f'{" ".join(selected_words)}.'
     return jumbled_sentence
+print(main())
