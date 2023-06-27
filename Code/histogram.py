@@ -2,7 +2,7 @@ import string
 import random
 
 def histogram ():
-    text_file = "./data/sherlock.txt"
+    text_file = "Code/sherlock.txt"
     source_text = open(text_file, "r").read()
     
     translator = str.maketrans("", "", string.punctuation + "“”‘’")
