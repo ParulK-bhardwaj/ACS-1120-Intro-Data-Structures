@@ -53,6 +53,7 @@ def main():
     # Test the Markov chain on words in a classic book title
     text_file = 'Code/sherlock.txt'
     source_text = open(text_file, "r").read()
+    # source_text = "I like dogs and you like dogs. I like cats but you hate cats."
     translator = str.maketrans("", "", string.punctuation + "“”‘’")
 
     # remove punctuations and split into words
@@ -65,3 +66,9 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+{
+    ('I', 'like'): {'dogs': 0.5, 'cats': 0.5},
+    ('like', 'dogs'): {'dogs': 1.0},
+
+}
