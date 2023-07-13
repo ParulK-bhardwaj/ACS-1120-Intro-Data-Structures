@@ -51,7 +51,7 @@ def print_markov_chain_samples(chain, start_word, num_words):
 
 def main():
     # Test the Markov chain on words in a classic book title
-    text_file = 'Code/sherlock.txt'
+    text_file = "sherlock.txt"
     source_text = open(text_file, "r").read()
     translator = str.maketrans("", "", string.punctuation + "“”‘’")
 
