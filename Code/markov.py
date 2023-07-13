@@ -59,8 +59,8 @@ def main():
     word_list = source_text.translate(translator).lower().split()
     chain = MarkovChain(word_list)
     start_word = 'i'
-    num_words = 20
-    print_markov_chain_samples(chain, start_word, num_words)
+    num_words = 30
+    return print_markov_chain_samples(chain, start_word, num_words)
 
 
 if __name__ == '__main__':

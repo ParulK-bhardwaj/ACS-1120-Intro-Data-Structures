@@ -1,7 +1,6 @@
 """Main script, uses other modules to generate sentences."""
 from flask import Flask, render_template
-# import histogram
-import markov
+import histogram
 
 
 app = Flask(__name__)
@@ -12,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    sentence = markov.main()
+    sentence = histogram.main()
     """Route that returns a web page containing the generated text."""
     # return f"<p>{sentence}</p>"
     return render_template("index.html", sentence=sentence)
