@@ -1,20 +1,13 @@
 """Main script, uses other modules to generate sentences."""
 from flask import Flask, render_template
-import markov
-
+import markov_higher
 
 app = Flask(__name__)
 
-# TODO: Initialize your histogram, hash table, or markov chain here.
-# Any code placed here will run only once, when the server starts.
-
-
 @app.route("/")
 def home():
-    sentence = markov.main()
-    """Route that returns a web page containing the generated text."""
-    # return f"<p>{sentence}</p>"
-    return render_template("index.html", sentence=sentence)
+    sentence = markov_higher.main()
+    return render_template('index.html', sentence=sentence)
 
 
 if __name__ == "__main__":
